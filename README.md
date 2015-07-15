@@ -33,6 +33,14 @@ something to the `/data` volume. Your data will be preserved over container
 restarts. But it is recommended to use a volume container or host directory as
 described in [Managing Data in Containers][4].
 
+## Specific Versions
+
+To run a specific version of Datomic, you can use tags. The following images are
+available:
+
+* akiel/datomic-free:0.9.5186
+* akiel/datomic-free:v0.9.5173
+
 [1]: <https://my.datomic.com/downloads/free>
 [2]: <https://registry.hub.docker.com/u/library/java/>
 [3]: <https://my.datomic.com/datomic.com/datomic-free-edition-license.html>

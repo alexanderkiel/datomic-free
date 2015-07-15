@@ -1,11 +1,9 @@
 FROM java:openjdk-7
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
-ENV DATOMIC_VERSION 0.9.5173
+ENV DATOMIC_VERSION 0.9.5186
 
-RUN curl --progress-bar --location \
-  --url "https://my.datomic.com/downloads/free/${DATOMIC_VERSION}" \
-  --output /tmp/datomic.zip
+ADD https://my.datomic.com/downloads/free/${DATOMIC_VERSION} /tmp/datomic.zip
 
 RUN unzip /tmp/datomic.zip
 RUN rm /tmp/datomic.zip
