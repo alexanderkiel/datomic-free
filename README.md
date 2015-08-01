@@ -38,6 +38,7 @@ described in [Managing Data in Containers][4].
 To run a specific version of Datomic, you can use tags. The following images are
 available:
 
+* akiel/datomic-free:0.9.5201
 * akiel/datomic-free:0.9.5198
 * akiel/datomic-free:0.9.5186
 * akiel/datomic-free:0.9.5173
