@@ -1,7 +1,7 @@
 FROM java:openjdk-7
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
-ENV DATOMIC_VERSION 0.9.5359
+ENV DATOMIC_VERSION 0.9.5372
 
 ADD https://my.datomic.com/downloads/free/${DATOMIC_VERSION} /tmp/datomic.zip
 
