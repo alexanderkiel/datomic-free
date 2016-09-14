@@ -1,6 +1,7 @@
 # Datomic Free Edition
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/akiel/datomic-free.svg)](https://hub.docker.com/r/akiel/datomic-free/)
+[![Image Layers](https://images.microbadger.com/badges/image/akiel/datomic-free.svg)](https://microbadger.com/images/akiel/datomic-free)
 
 Non-official Docker image for [Datomic Free Edition][1] based on the official
 [Java Image][2].
