@@ -1,7 +1,7 @@
 FROM openjdk:8u151-jdk
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
-ENV DATOMIC_VERSION 0.9.5561.59
+ENV DATOMIC_VERSION 0.9.5561.62
 
 ADD https://my.datomic.com/downloads/free/${DATOMIC_VERSION} /tmp/datomic.zip
 
