@@ -68,6 +68,7 @@ available:
 * akiel/datomic-free:0.9.5198
 * akiel/datomic-free:0.9.5186
 * akiel/datomic-free:0.9.5173
+* akiel/datomic-free:0.8.3814
 
 [1]: <https://my.datomic.com/downloads/free>
 [2]: <https://registry.hub.docker.com/u/library/java/>
