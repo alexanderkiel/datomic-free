@@ -1,7 +1,7 @@
 FROM openjdk:8u151-jdk
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
-ENV DATOMIC_VERSION 0.9.5656
+ENV DATOMIC_VERSION 0.8.3814
 
 ADD https://my.datomic.com/downloads/free/${DATOMIC_VERSION} /tmp/datomic.zip
 
@@ -14,11 +14,11 @@ RUN cp config/samples/free-transactor-template.properties transactor.properties
 RUN sed "s/host=localhost/host=0.0.0.0/" -i transactor.properties
 
 RUN mkdir /data
-RUN sed "s/# data-dir=data/data-dir=\/data/" -i transactor.properties
+RUN sed "s/#data-dir=.*/data-dir=\/data/" -i transactor.properties
 VOLUME /data
 
 RUN mkdir /log
-RUN sed "s/# log-dir=log/log-dir=\/log/" -i transactor.properties
+RUN sed "s/#log-dir=.*/log-dir=\/log/" -i transactor.properties
 VOLUME /log
 
 ADD start.sh ./
