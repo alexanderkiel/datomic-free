@@ -19,7 +19,7 @@ is sufficient
 
 You can access your databases through this URIs
 
-    datomic:free://localhost:4334/<DB_NAME>
+    datomic:free://localhost:4334/<DB_NAME>?password=my-pwd
 
 If your Docker host differs from localhost, you have to specify the hostname or
 IP through the environment variable ALT_HOST
@@ -28,7 +28,25 @@ IP through the environment variable ALT_HOST
 
 and access your databases through the URIs
 
-    datomic:free://<DOCKER_HOST>:4334/<DB_NAME>
+    datomic:free://<DOCKER_HOST>:4334/<DB_NAME>?password=my-pwd
+
+If you want to specify the database password you can do it through the environment
+variable DB_PASSWORD
+
+    docker run -d -p 4334-4336:4334-4336 -e DB_PASSWORD=<YOUR_PWD> --name datomic-free akiel/datomic-free
+
+and access your databases through this URIs
+
+    datomic:free://localhost:4334/<DB_NAME>?password=<YOUR_PWD>
+
+To change the database password you can do it through the environment
+variables DB_PASSWORD and DB_OLD_PASSWORD
+
+    docker run -d -p 4334-4336:4334-4336 -e DB_OLD_PASSWORD=<YOUR_PWD> -e DB_PASSWORD=<YOUR_NEW_PWD> --name datomic-free akiel/datomic-free
+
+and access your databases through this URIs
+
+    datomic:free://localhost:4334/<DB_NAME>?password=<YOUR_NEW_PWD>
 
 The image exposes two volumes, one `/data` and one `/log` volume. If you give
 your containers names like in the commands above, you don't have to bind 
