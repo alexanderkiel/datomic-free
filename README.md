@@ -15,26 +15,30 @@ are agreeing to those terms.
 To start a container with Docker running at localhost, the following command
 is sufficient
 
-    docker run -d -p 4334-4336:4334-4336 --name datomic-free akiel/datomic-free
+    docker run -d -e ADMIN_PASSWORD="admin" -e DATOMIC_PASSWORD="datomic" -p 4334-4336:4334-4336 --name datomic-free akiel/datomic-free
 
 You can access your databases through this URIs
 
-    datomic:free://localhost:4334/<DB_NAME>
+    datomic:free://localhost:4334/<DB_NAME>?password=datomic
 
 If your Docker host differs from localhost, you have to specify the hostname or
 IP through the environment variable ALT_HOST
 
-    docker run -d -p 4334-4336:4334-4336 -e ALT_HOST=<DOCKER_HOST> --name datomic-free akiel/datomic-free
+    docker run -d -e ADMIN_PASSWORD="admin" -e DATOMIC_PASSWORD="datomic" -p 4334-4336:4334-4336 -e ALT_HOST=<DOCKER_HOST> --name datomic-free akiel/datomic-free
 
 and access your databases through the URIs
 
-    datomic:free://<DOCKER_HOST>:4334/<DB_NAME>
+    datomic:free://<DOCKER_HOST>:4334/<DB_NAME>?password=datomic
 
 The image exposes two volumes, one `/data` and one `/log` volume. If you give
 your containers names like in the commands above, you don't have to bind 
 something to the `/data` volume. Your data will be preserved over container
 restarts. But it is recommended to use a volume container or host directory as
 described in [Managing Data in Containers][4].
+
+To change the passwords you can do it through the environment variables ADMIN_PASSWORD_OLD and DATOMIC_PASSWORD_OLD
+
+    docker run -d -e ADMIN_PASSWORD_OLD="admin" -e ADMIN_PASSWORD="admin-new" -e DATOMIC_PASSWORD_OLD="datomic" -e DATOMIC_PASSWORD="datomic-new" -p 4334-4336:4334-4336 --name datomic-free akiel/datomic-free
 
 ## Specific Versions
 

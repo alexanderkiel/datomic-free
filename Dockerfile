@@ -13,6 +13,8 @@ RUN cp config/samples/free-transactor-template.properties transactor.properties
 
 RUN sed "s/host=localhost/host=0.0.0.0/" -i transactor.properties
 
+RUN sed "s/# storage-access=local/storage-access=remote/" -i transactor.properties
+
 RUN mkdir /data
 RUN sed "s/# data-dir=data/data-dir=\/data/" -i transactor.properties
 VOLUME /data
