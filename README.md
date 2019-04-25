@@ -45,7 +45,8 @@ To change the passwords you can do it through the environment variables ADMIN_PA
 To run a specific version of Datomic, you can use tags. The following images are
 available:
 
-* akiel/datomic-free:0.9.5703
+* akiel/datomic-free:0.9.5703-1 (fixes [remote access][6] and [volumes][5])
+* akiel/datomic-free:0.9.5703 (broken remote access)
 * akiel/datomic-free:0.9.5697
 * akiel/datomic-free:0.9.5656
 * akiel/datomic-free:0.9.5651
@@ -80,3 +81,5 @@ available:
 [2]: <https://registry.hub.docker.com/u/library/java/>
 [3]: <https://my.datomic.com/datomic.com/datomic-free-edition-license.html>
 [4]: <https://docs.docker.com/userguide/dockervolumes/#volume>
+[5]: <https://github.com/alexanderkiel/datomic-free/issues/10>
+[6]: <https://github.com/alexanderkiel/datomic-free/issues/5>
