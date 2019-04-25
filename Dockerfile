@@ -17,11 +17,9 @@ RUN sed "s/# storage-access=local/storage-access=remote/" -i transactor.properti
 
 RUN mkdir /data
 RUN sed "s/# data-dir=data/data-dir=\/data/" -i transactor.properties
-VOLUME /data
 
 RUN mkdir /log
 RUN sed "s/# log-dir=log/log-dir=\/log/" -i transactor.properties
-VOLUME /log
 
 ADD start.sh ./
 RUN chmod +x start.sh
