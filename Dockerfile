@@ -3,11 +3,12 @@ MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
 ENV DATOMIC_VERSION 0.9.5703
 
-ADD https://my.datomic.com/downloads/free/${DATOMIC_VERSION} /tmp/datomic.zip
+RUN wget https://my.datomic.com/downloads/free/${DATOMIC_VERSION} -qO /tmp/datomic.zip \
+  && unzip /tmp/datomic.zip \
+  && rm /tmp/datomic.zip \
+  && mv /datomic-free-${DATOMIC_VERSION} /datomic
 
-RUN unzip /tmp/datomic.zip && rm /tmp/datomic.zip
-
-WORKDIR datomic-free-${DATOMIC_VERSION}
+WORKDIR /datomic
 
 RUN cp config/samples/free-transactor-template.properties transactor.properties
 
