@@ -1,4 +1,4 @@
-FROM openjdk:8u151-jdk
+FROM openjdk:8u212-jre
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
 ENV DATOMIC_VERSION 0.9.5703
