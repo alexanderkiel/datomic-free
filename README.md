@@ -80,7 +80,7 @@ available:
 
 [1]: <https://my.datomic.com/downloads/free>
 [2]: <https://registry.hub.docker.com/u/library/java/>
-[3]: <https://my.datomic.com/datomic.com/datomic-free-edition-license.html>
+[3]: <https://www.datomic.com/datomic-free-edition-license.html>
 [4]: <https://docs.docker.com/userguide/dockervolumes/#volume>
 [5]: <https://github.com/alexanderkiel/datomic-free/issues/10>
 [6]: <https://github.com/alexanderkiel/datomic-free/issues/5>
