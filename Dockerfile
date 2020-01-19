@@ -1,7 +1,7 @@
 FROM openjdk:8u212-jre
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 
-ENV DATOMIC_VERSION 0.9.5703
+ENV DATOMIC_VERSION 0.9.5703.21
 
 RUN wget https://my.datomic.com/downloads/free/${DATOMIC_VERSION} -qO /tmp/datomic.zip \
   && unzip /tmp/datomic.zip \
