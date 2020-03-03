@@ -22,4 +22,6 @@ if [ -n "$DATOMIC_PASSWORD_OLD" ]; then
   sed "s/# old-storage-datomic-password=/old-storage-datomic-password=$DATOMIC_PASSWORD_OLD/" -i transactor.properties
 fi
 
+sed "s/# encrypt-channel=true/encrypt-channel=${ENCRYPT_CHANNEL:-true}/" -i transactor.properties
+
 bin/transactor transactor.properties

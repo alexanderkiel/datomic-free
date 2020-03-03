@@ -36,9 +36,11 @@ something to the `/data` volume. Your data will be preserved over container
 restarts. But it is recommended to use a volume container or host directory as
 described in [Managing Data in Containers][4].
 
-To change the passwords you can do it through the environment variables ADMIN_PASSWORD_OLD and DATOMIC_PASSWORD_OLD
+To change the passwords you can do it through the environment variables `ADMIN_PASSWORD_OLD` and `DATOMIC_PASSWORD_OLD`
 
     docker run -d -e ADMIN_PASSWORD_OLD="admin" -e ADMIN_PASSWORD="admin-new" -e DATOMIC_PASSWORD_OLD="datomic" -e DATOMIC_PASSWORD="datomic-new" -p 4334-4336:4334-4336 --name datomic-free akiel/datomic-free
+
+In order to disable SSL  between the peers and the transactor, set `ENCRYPT_CHANNEL` to `false`.
 
 ## Specific Versions
 
