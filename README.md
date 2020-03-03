@@ -42,7 +42,7 @@ To change the passwords you can do it through the environment variables `ADMIN_P
 
 In order to disable SSL  between the peers and the transactor, set `ENCRYPT_CHANNEL` to `false`.
 
-In order to change the default memory settings of `-Xms1g` and `-Xmx1g`, use the environment variables `XMS` and `XMX`.
+In order to change the default memory settings of `-Xms1g` and `-Xmx1g`, use the environment variables `XMS` and `XMX`. You can also use `JAVA_OPTS` to set other Java options.
 
 ## Specific Versions
 
