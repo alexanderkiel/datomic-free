@@ -47,6 +47,7 @@ In order to disable SSL  between the peers and the transactor, set `ENCRYPT_CHAN
 To run a specific version of Datomic, you can use tags. The following images are
 available:
 
+* akiel/datomic-free:0.9.5703-3 (#16, updated OpenJDK base image)
 * akiel/datomic-free:0.9.5703-2 (updated OpenJDK base image)
 * akiel/datomic-free:0.9.5703-1 (fixes [remote access][6] and [volumes][5])
 * akiel/datomic-free:0.9.5703 (broken remote access)
