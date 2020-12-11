@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source ./read-secrets.sh DATOMIC_PASSWORD DATOMIC_PASSWORD_OLD ADMIN_PASSWORD ADMIN_PASSWORD_OLD
+
 if [ -z "$ADMIN_PASSWORD" ]; then
   echo "Environment variable ADMIN_PASSWORD not set. See https://docs.datomic.com/on-prem/configuring-embedded.html#sec-2-1"
   exit 1

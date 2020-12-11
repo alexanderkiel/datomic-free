@@ -24,6 +24,8 @@ RUN sed "s/# log-dir=log/log-dir=\/log/" -i transactor.properties
 
 ADD start.sh ./
 RUN chmod +x start.sh
+ADD read-secrets.sh ./
+RUN chmod +x read-secrets.sh
 
 EXPOSE 4334 4335 4336
 
