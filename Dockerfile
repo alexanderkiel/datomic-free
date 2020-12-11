@@ -1,5 +1,5 @@
-MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
 FROM openjdk:8u275-jre
+LABEL maintainer="Chris Hapgood cch1@hapgood.com"
 
 ENV DATOMIC_VERSION 0.9.5703.21
 
