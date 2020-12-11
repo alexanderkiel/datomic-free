@@ -1,5 +1,5 @@
-FROM openjdk:8u242-jre
 MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
+FROM openjdk:8u275-jre
 
 ENV DATOMIC_VERSION 0.9.5703.21
 
