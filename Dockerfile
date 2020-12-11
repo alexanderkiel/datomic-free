@@ -1,7 +1,7 @@
-FROM openjdk:8u242-jre
-MAINTAINER Alexander Kiel <alexanderkiel@gmx.net>
+FROM openjdk:8u275-jre
+LABEL maintainer="Chris Hapgood cch1@hapgood.com"
 
-ENV DATOMIC_VERSION 0.9.5703
+ENV DATOMIC_VERSION 0.9.5703.21
 
 RUN wget https://my.datomic.com/downloads/free/${DATOMIC_VERSION} -qO /tmp/datomic.zip \
   && unzip /tmp/datomic.zip \
@@ -24,6 +24,8 @@ RUN sed "s/# log-dir=log/log-dir=\/log/" -i transactor.properties
 
 ADD start.sh ./
 RUN chmod +x start.sh
+ADD read-secrets.sh ./
+RUN chmod +x read-secrets.sh
 
 EXPOSE 4334 4335 4336
 
